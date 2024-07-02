@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dermatologist Clinic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('search.png');
+            background-position: 10px 12px;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #myUL li a {
+                border: 1px solid #ddd;
+                margin-top: -1px; /* Prevent double borders */
+                background-color: #f6f6f6;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                color: black;
+                display: block
+            }
+
+                #myUL li a:hover:not(.header) {
+                    background-color: #eee;
+                }
+    </style>
+</head>
+<body style="background-color: #EFEFEF ">
+    <p>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for question.." title="Type in a question">
+    </p>
+
+    <p>
+        <ul id="myUL">
+            <li><a href="operation.html" target="middle">When is EverGlow Clinic operation hour?</a></li>
+            <li><a href="address.html" target="middle">What is EverGlow Clinic address?</a></li>
+            <li><a href="productfaq.html" target="middle">Where can I buy EverGlow products?</a></li>
+            <li><a href="procedures.html" target="middle">Are the cosmetic procedures safe?</a></li>
+            <li><a href="appointment.html" target="middle">What should I bring to my first appointment?</a></li>
+            <li><a href="effects.html" target="middle">What are the common side effects of dermatological treatments?</a></li>
+        </ul>
+    </p>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>
