@@ -50,16 +50,16 @@
         <form action="https://api.web3forms.com/submit" method="post">
             <input type="hidden" name="access_key" value="c8cf10f8-d6d8-4b6b-83d9-9f44622e8a6e">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
             <label for="lname">E-mail</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your e-mail...">
+            <input type="text" id="lname" name="lastname" placeholder="Your e-mail..." required>
 
             <label for="subject">Feedback</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
 
             <input type="submit" value="Submit">
         </form>
